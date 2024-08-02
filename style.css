@@ -24,7 +24,6 @@ header {
 header .container {
   display: flex;
   justify-content: flex-start;
-  /* Align items to the start */
   align-items: center;
   width: 100%;
 }
@@ -34,35 +33,44 @@ header .logo img {
 }
 
 nav {
-  margin-left: auto;
-  /* Pushes the nav to the right of the remaining space */
+  position: absolute;
+  top: 20px;
+  /* Adjust based on your layout */
+  right: 30px;
+  /* Adjust based on your layout */
+  z-index: 3;
+  /* Ensures navigation is visible and accessible */
 }
 
 nav ul {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
   display: flex;
-  align-items: center;
-  /* Ensures vertical alignment */
 }
 
 nav ul li {
-  margin: 0 20px;
+  margin-right: 20px;
+  /* Space between menu items */
 }
 
 nav ul li a {
-  color: #333;
+  color: #fff;
+  /* Adjust as necessary */
   text-decoration: none;
-  font-weight: bold;
+  font-size: 16px;
+  /* Adjust as necessary */
 }
 
 .hero {
-  background: url('path/to/hero-image.png') no-repeat center center/cover;
-  color: #fff;
-  text-align: center;
-  padding: 200px 0;
+  background: url('firstimage.png') no-repeat center center/cover;
+  /* Replace gray background with an image */
   position: relative;
+  text-align: center;
+  color: #fff;
+  /* Ensure text color is white if needed */
+  padding: 100px 0;
+  /* Adjust padding based on your design needs */
 }
 
 .hero .overlay {
@@ -71,23 +79,31 @@ nav ul li a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Darkens the background image, adjust opacity as needed */
+  z-index: 2;
+  /* Ensures overlay is above the background but below the text */
 }
 
 .hero .container {
   position: relative;
-  z-index: 2;
+  z-index: 3;
+  /* Ensures text is above the overlay */
+  padding: 20px;
+  /* Adjust padding for layout */
 }
 
-.hero-text {
-  max-width: 800px;
-  margin: 0 auto;
+
+.hero h1 {
+  margin: 0 0 20px 0;
+  /* Space below the heading */
+  font-size: 36px;
+  /* Large text size for impact */
 }
 
-.hero-text h1 {
-  font-size: 3em;
-  margin-bottom: 20px;
+.hero p {
+  font-size: 24px;
+  /* Legible text size for descriptions */
 }
 
 .about,
@@ -112,30 +128,78 @@ nav ul li a {
   margin-bottom: 20px;
 }
 
+.achievements {
+  position: relative;
+  text-align: center;
+  padding: 50px 0 0 0;
+  /* Adjust the top padding, remove bottom padding if needed */
+  background: url('xprize.jpg') no-repeat center center/cover;
+  /* Ensure the path to your image is correct */
+  color: #fff;
+  /* Ensures text color is white */
+  overflow: hidden;
+  /* Keeps all content within the boundaries */
+}
+
+.achievements .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  /* Effectively darkens the background image */
+  z-index: 2;
+  /* Ensures the overlay is just above the background */
+}
+
+.achievements .container {
+  position: relative;
+  z-index: 3;
+  /* Ensures text and content are above the overlay */
+  padding: 0 20px 80px;
+  /* Adjusted bottom padding to ensure text doesn't overlap with awards */
+}
+
 .awards {
+  position: absolute;
+  bottom: 0;
+  /* Aligns to the bottom of the achievements section */
+  left: 0;
+  right: 0;
+  height: 60px;
+  /* Defined height for the awards container */
+  background: rgba(0, 0, 0, 0.5);
+  /* Translucent dark background extends across the full width */
   display: flex;
   justify-content: center;
+  align-items: center;
+  /* Center items vertically */
   gap: 10px;
+  z-index: 3;
+  /* Ensures visibility above the overlay */
 }
 
 .awards img {
   width: 80px;
   height: auto;
+  display: block;
+  /* Ensure images are block-level to handle margins correctly */
+  margin: 5px 10px;
+  /* Visually spaced */
 }
+
+/* Continue with the rest of your CSS without modification */
 
 .products .product-list {
   display: flex;
   justify-content: space-around;
-  /* Distributes spacing evenly */
   flex-wrap: nowrap;
-  /* Prevents wrapping into multiple lines */
   align-items: stretch;
-  /* Stretches items to fill the container vertically */
 }
 
 .product-item {
   width: 23%;
-  /* Adjust based on actual width desired */
   text-align: center;
   background: #f4f4f4;
   padding: 20px;
@@ -148,7 +212,6 @@ nav ul li a {
   height: auto;
   margin-bottom: 10px;
 }
-
 
 .product-item h3 {
   font-size: 1.5em;
