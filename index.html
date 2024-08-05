@@ -1,119 +1,302 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enuma</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enuma</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-  <header>
-    <div class="container">
-      <div class="logo">
-        <img src="enuma.png" alt="Enuma Logo">
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#">회사 소개</a></li>
-          <li><a href="#">가족</a></li>
-          <li><a href="#">교사들</a></li>
-          <li><a href="#">NGO 및 정부</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="hero-text">
-        <h1>미래를 창조하는</h1>
-        <h1>모든 어린이가</h1>
-        <h1>자신의 페이스에 맞춰 배울 수 있는 곳</h1>
-      </div>
-    </div>
-  </section>
-
-  <section class="about">
-    <div class="container">
-      <h2>Who We Are</h2>
-      <p>Enuma는 전 세계에서 인정받는 교육 기술 회사로서 기초 교육 분야에서 최고의 소프트웨어를 제공하고 있습니다.</p>
-      <p>Enuma는 2012년 캘리포니아주 버클리에서 설립되어, 학습 장애를 가진 아이들이 스스로 학습할 수 있도록 돕기 위해 최상의 디지털 제품을 만들고자 하는 목표를 가지고 있습니다.</p>
-      <p>우리는 Todo Math, Todo English, Todo Korean과 같은 인기있는 기본 학습 앱 시리즈를 제공하며, 이러한 앱들은 전 세계적으로 1300만 회 이상 다운로드되었습니다. 또한
-        Enuma School, Enuma One과 같은 태블릿 기반 학습 프로그램을 제공합니다.</p>
-    </div>
-  </section>
-
-  <section class="achievements" style="background: url('xprize.jpg') no-repeat center center/cover;">
-    <div class="overlay"></div>
-    <div class="container">
-      <h2>글로벌 학습 XPRIZE 수상</h2>
-      <p>Enuma는 5년간 1500만 달러의 상금을 걸고 열린 글로벌 학습 XPRIZE 공동 우승자입니다. Elon Musk가 후원한 이 대회에서 Enuma의 솔루션이 문맹인 환경에서도 기본적인 독서,
-        쓰기, 수학을 스스로 가르칠 수 있음을 입증하였습니다.</p>
-      <p>Enuma의 제품은 미국, 한국, 인도네시아의 초등학교 및 특수 교육 교실뿐만 아니라 이라크와 탄자니아와 같은 도전적인 학습 환경의 난민 캠프에서 사용됩니다.</p>
-      <div class="awards">
-        <img src="award1.png" alt="2020년 SDGs 혁신 경연 대회 우승">
-        <img src="award2.png" alt="글로벌 학습 XPRIZE 우승">
-        <img src="award3.png" alt="2015, 2018 골든 메달">
-        <img src="award4.png" alt="부모님의 선택 골드 상">
-        <img src="award5.png" alt="구글 플레이 베스트 앱">
-      </div>
-    </div>
-  </section>
-
-  <section class="products">
-    <div class="container">
-      <h2>Todo Series</h2>
-      <div class="product-list">
-        <div class="product-item">
-          <img src="todoone.png" alt="Todo One">
-          <h3>Todo One</h3>
-          <p>A comprehensive learning package of the world's best foundational learning products Todo English, Todo
-            Korean, and Todo Math in one.</p>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="enuma.png" alt="Enuma Logo" />
         </div>
-        <div class="product-item">
-          <img src="todomath.png" alt="Todo Math">
-          <h3>Todo Math</h3>
-          <p>Todo Math는 아이들이 수학의 기초를 다질 수 있도록 도와줍니다.</p>
-        </div>
-        <div class="product-item">
-          <img src="todoenglish.png" alt="Todo English">
-          <h3>Todo English</h3>
-          <p>Todo English는 영어 학습을 재미있고 효과적으로 할 수 있도록 도와줍니다.</p>
-        </div>
-        <div class="product-item">
-          <img src="todokorean.png" alt="Todo Korean">
-          <h3>Todo Korean</h3>
-          <p>Todo Korean은 한국어 학습을 위한 최적의 앱입니다.</p>
+        <nav>
+          <ul>
+            <li><a href="#">회사 소개</a></li>
+            <li><a href="#">가족</a></li>
+            <li><a href="#">교사들</a></li>
+            <li><a href="#">NGO 및 정부</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="hero-text">
+          <h1>미래를 창조하는</h1>
+          <h1>모든 어린이가</h1>
+          <h1>자신의 페이스에 맞춰 배울 수 있는 곳</h1>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="contact">
-    <div class="container">
-      <h2>문의하기</h2>
-      <form action="#">
-        <label for="name">이름:</label>
-        <input type="text" id="name" name="name">
-        <label for="email">이메일:</label>
-        <input type="email" id="email" name="email">
-        <label for="message">메시지:</label>
-        <textarea id="message" name="message"></textarea>
-        <button type="submit">보내기</button>
-      </form>
-    </div>
-  </section>
+    <section class="about">
+      <div class="container">
+        <h2>Who We Are</h2>
+        <p>
+          Enuma는 전 세계에서 인정받는 교육 기술 회사로서 기초 교육 분야에서
+          최고의 소프트웨어를 제공하고 있습니다.
+        </p>
+        <p>
+          Enuma는 2012년 캘리포니아주 버클리에서 설립되어, 학습 장애를 가진
+          아이들이 스스로 학습할 수 있도록 돕기 위해 최상의 디지털 제품을
+          만들고자 하는 목표를 가지고 있습니다.
+        </p>
+        <p>
+          우리는 Todo Math, Todo English, Todo Korean과 같은 인기있는 기본 학습
+          앱 시리즈를 제공하며, 이러한 앱들은 전 세계적으로 1300만 회 이상
+          다운로드되었습니다. 또한 Enuma School, Enuma One과 같은 태블릿 기반
+          학습 프로그램을 제공합니다.
+        </p>
+      </div>
+    </section>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2024 Enuma. All rights reserved.</p>
-    </div>
-  </footer>
+    <section
+      class="achievements"
+      style="background: url('xprize.jpg') no-repeat center center/cover"
+    >
+      <div class="overlay"></div>
+      <div class="container">
+        <h2>글로벌 학습 XPRIZE 우승</h2>
+        <p>
+          Enuma는 5년간 1500만 달러의 상금을 걸고 열린 글로벌 학습 XPRIZE 공동
+          우승자입니다. Elon Musk가 후원한 이 대회에서 Enuma의 솔루션이 문맹인
+          환경에서도 기본적인 독서, 쓰기, 수학을 스스로 가르칠 수 있음을
+          입증하였습니다.
+        </p>
+        <p>
+          Enuma의 제품은 미국, 한국, 인도네시아의 초등학교 및 특수 교육 교실뿐만
+          아니라 이라크와 탄자니아와 같은 도전적인 학습 환경의 난민 캠프에서
+          사용됩니다.
+        </p>
+        <div class="awards">
+          <img src="award1.png" alt="2020년 SDGs 혁신 경연 대회 우승" />
+          <img src="award2.png" alt="글로벌 학습 XPRIZE 우승" />
+          <img src="award3.png" alt="2015, 2018 골든 메달" />
+          <img src="award4.png" alt="부모님의 선택 골드 상" />
+          <img src="award5.png" alt="구글 플레이 베스트 앱" />
+        </div>
+      </div>
+    </section>
 
-  <script src="scripts.js"></script>
-</body>
+    <section class="products">
+      <div class="container">
+        <h2>토도 시리즈</h2>
+        <div class="history">
+          <div class="history-text">
+            <h3 class="subtitle">최고의 디지털 학습 경험</h3>
+            <p>
+              2012년 Todo Math 출시 이후, Todo 앱 시리즈는 미국, 한국, 중국,
+              일본을 포함한 20개 이상의 시장에서 기초 학습 제품의 표준이
+              되었습니다.
+            </p>
+            <p>
+              한국에서는 토도수학, 토도영어, 토도한글 뿐만 아니라 태블릿 기반
+              학습 프로그램인 토도원도 포함됩니다.
+            </p>
+          </div>
+          <div class="history-image">
+            <img src="todohistory.png" alt="Todo Series History Image" />
+          </div>
+        </div>
+        <div class="product-list">
+          <div class="product-item">
+            <img src="todoone.png" alt="Todo One" />
+            <h3>토도원</h3>
+            <p>
+              세계 최고의 기초 학습 제품인 토도영어, 토도한글, 토도수학을 하나로
+              묶은 종합 학습 패키지입니다.
+            </p>
+          </div>
+          <div class="product-item">
+            <img src="todomath.png" alt="Todo Math" />
+            <h3>토도수학</h3>
+            <p>
+              게임 기반의 수 세기부터 AI 기반의 2학년 수준 연습까지, 수학 디지털
+              학습의 세계 표준입니다.
+            </p>
+          </div>
+          <div class="product-item">
+            <img src="todoenglish.png" alt="Todo English" />
+            <h3>토도영어</h3>
+            <p>
+              미국에서 개발된 최신 EFL 커리큘럼. 읽기, 쓰기, 듣기, 말하기를
+              종합적으로 학습하여 영어 자신감을 키워줍니다.
+            </p>
+          </div>
+          <div class="product-item">
+            <img src="todokorean.png" alt="Todo Korean" />
+            <h3>토도한글</h3>
+            <p>
+              재미있는 음소 접근 방식의 한국어 학습. 필수 어휘를 배우고 책을
+              읽고 독서 활동을 통해 독립적으로 읽기를 배웁니다.
+            </p>
+          </div>
+        </div>
+        <button
+          class="product-button"
+          style="
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #fff;
+            color: #333;
+            border: 2px solid #333;
+            cursor: pointer;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            align-self: center;
+            margin-left: auto;
+            margin-right: auto;
+          "
+        >
+          더 알아보기
+        </button>
+      </div>
+    </section>
 
+    <section class="todo-classroom">
+      <div class="container">
+        <div class="todo-header">
+          <h2>Todo for the Classroom</h2>
+          <div class="todo-text">
+            <h3>교육기관용 토도 시리즈</h3>
+            <p>
+              2013년부터 현재까지 토도수학은 7,000개 이상의 교실에서
+              사용되었습니다.
+            </p>
+            <p>
+              2020년 출시 이후, Enuma 글방(토도한글 + 토도수학)은 COVID-19 기간
+              동안 한국에서 4,000명 이상의 취약 학생들이 학교, 가정 및 지역사회
+              센터에서 원격 학습을 위해 사용되었습니다.
+            </p>
+          </div>
+        </div>
+        <div class="todo-features">
+          <div class="feature-item">
+            <img src="lms.png" alt="LMS for Schools" />
+            <h3>학교용 LMS</h3>
+            <p>
+              토도수학과 토도한글은 교실 사용 모드를 학습 관리 시스템(LMS)
+              서비스와 결합한 학교용 서비스를 제공합니다.
+            </p>
+          </div>
+          <div class="feature-item">
+            <img src="Globe.png" alt="Universal Design for Learning" />
+            <h3>학습을 위한 유니버설 디자인</h3>
+            <p>
+              다양한 학습자, 특히 학습 차이가 있는 학습자를 지원하기 위해
+              Enuma의 제품은 AI와 유니버설 디자인을 적용합니다.
+            </p>
+          </div>
+          <div class="feature-item">
+            <img src="Calendar.png" alt="Proven Satisfaction" />
+            <h3>검증된 고객 만족도</h3>
+            <p>
+              교사, 부모 및 프로젝트 관리자에 대한 다양한 설문 조사에서 90%
+              이상의 만족도를 기록했습니다.
+            </p>
+          </div>
+        </div>
+        <button class="learn-more-button">더 알아보기</button>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="container">
+        <h2>문의하기</h2>
+        <div class="form-and-image">
+          <form action="#">
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="제목"
+                style="
+                  width: calc(50% - 5px);
+                  border-radius: 10px;
+                  box-sizing: border-box;
+                  padding: 10px;
+                  border: 1px solid #ccc;
+                  font-weight: bold;
+                "
+              />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="이메일 주소"
+                style="
+                  width: calc(50% - 5px);
+                  border-radius: 10px;
+                  box-sizing: border-box;
+                  padding: 10px;
+                  border: 1px solid #ccc;
+                  font-weight: bold;
+                "
+              />
+            </div>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="메시지"
+              style="
+                width: 100%;
+                height: 150px;
+                padding: 10px;
+                margin-top: 10px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                box-sizing: border-box;
+                font-weight: bold;
+              "
+            ></textarea>
+            <button
+              type="submit"
+              style="
+                margin-top: 20px;
+                padding: 10px 20px;
+                background: #fff;
+                color: #333;
+                border: 2px solid #333;
+                cursor: pointer;
+                border-radius: 25px;
+                font-size: 16px;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+                align-self: flex-start;
+                margin-left: 0;
+              "
+            >
+              메시지 보내기
+            </button>
+          </form>
+          <div class="contact-image">
+            <img src="contact.png" alt="Contact Image" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Enuma. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
 </html>
