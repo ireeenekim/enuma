@@ -64,13 +64,32 @@ nav ul li a {
 
 .hero {
   background: url("firstimage.png") no-repeat center center/cover;
-  /* Replace gray background with an image */
   position: relative;
   text-align: center;
   color: #fff;
-  /* Ensure text color is white if needed */
   padding: 100px 0;
-  /* Adjust padding based on your design needs */
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+}
+
+.hero .container {
+  position: relative;
+  z-index: 3;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h1 {
+  margin: 0 0 20px 0;
+  font-size: 36px;
+}
+
+.hero p {
+  font-size: 24px;
 }
 
 .hero .overlay {
@@ -80,32 +99,52 @@ nav ul li a {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  /* Darkens the background image, adjust opacity as needed */
   z-index: 2;
-  /* Ensures overlay is above the background but below the text */
 }
 
-.hero .container {
-  position: relative;
-  z-index: 3;
-  /* Ensures text is above the overlay */
-  padding: 20px;
-  /* Adjust padding for layout */
+.about {
+  padding: 50px 0;
 }
 
-.hero h1 {
-  margin: 0 0 20px 0;
-  /* Space below the heading */
-  font-size: 36px;
-  /* Large text size for impact */
+.about .container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-.hero p {
-  font-size: 24px;
-  /* Legible text size for descriptions */
+.about .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
 }
 
-.about,
+.about h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-align: left;
+  flex: 1;
+}
+
+.about .container .text {
+  flex: 2;
+  text-align: right;
+  max-width: 50%;
+}
+
+.about .container h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.about .container p {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
 .products,
 .contact,
 .achievements {
@@ -113,31 +152,14 @@ nav ul li a {
   text-align: center;
 }
 
-.about h2,
-.products h2,
-.contact h2,
-.achievements h2 {
-  font-size: 2.5em;
-}
-
-.about p,
-.achievements p {
-  font-size: 1.2em;
-  margin-left: 20%;
-  margin-right: 20%;
-}
-
 .achievements {
   position: relative;
   text-align: center;
-  padding: 100px 0 0 100;
-  /* Adjust the top padding, remove bottom padding if needed */
+  padding: 100px 0; /* Adjust the padding as necessary */
   background: url("xprize.jpg") no-repeat center center/cover;
-  /* Ensure the path to your image is correct */
+  background-size: cover;
   color: #fff;
-  /* Ensures text color is white */
   overflow: hidden;
-  /* Keeps all content within the boundaries */
 }
 
 .achievements .overlay {
@@ -145,49 +167,84 @@ nav ul li a {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.422);
-  /* Effectively darkens the background image */
+  height: calc(100%); /* Adjust to ensure it does not cover the awards box */
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
-  /* Ensures the overlay is just above the background */
 }
 
 .achievements .container {
   position: relative;
   z-index: 3;
-  /* Ensures text and content are above the overlay */
-  padding: 0 20px 80px;
-  /* Adjusted bottom padding to ensure text doesn't overlap with awards */
-  margin-top: auto;
-  margin-bottom: auto;
+  padding: 20px;
+  padding-bottom: 160px; /* Increase bottom padding to avoid text overlap and provide more space */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box; /* Ensure padding is included in the total width */
+}
+
+.achievements h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center; /* Ensure the text is centered */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.achievements p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.achievements .highlight-text {
+  font-size: 1.3em;
+  color: #fff; /* White color for highlighted text */
 }
 
 .awards {
-  position: absolute;
-  bottom: -50px;
-  /* Aligns to the bottom of the achievements section */
-  left: 0;
-  right: 0;
-  height: 100px;
-  /* Defined height for the awards container */
-  background: rgba(0, 0, 0, 0.5);
-  /* Translucent dark background extends across the full width */
   display: flex;
   justify-content: center;
-  align-items: center;
-  /* Center items vertically */
-  gap: 10px;
-  z-index: 3;
-  /* Ensures visibility above the overlay */
+  align-items: flex-start;
+  gap: 5%;
+  flex-wrap: wrap;
+  padding: 0 0;
+  background: #39393982; /* Solid black background */
+  width: 100%;
+  margin: 0; /* Remove any default margin */
+  box-sizing: border-box; /* Ensure padding is included in the total width */
+  position: absolute; /* Positioning the awards box at the bottom */
+  bottom: 0; /* Align to the bottom */
+  z-index: 4; /* Ensure it is above the overlay */
+  backdrop-filter: blur(15px);
 }
 
-.awards img {
+.award {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.award img {
   width: 80px;
   height: auto;
   display: block;
-  /* Ensure images are block-level to handle margins correctly */
-  margin: 5px 100px;
-  /* Visually spaced */
+  margin: 0 auto 10px;
+}
+
+.award .content {
+  font-size: 1.1em;
+  color: #fff;
+  margin: 0;
+  max-width: 160px;
+}
+
+.award .title {
+  font-size: 0.9em;
+  color: #888;
+  margin: 0;
+  max-width: 160px;
 }
 
 /* Continue with the rest of your CSS without modification */
@@ -239,6 +296,10 @@ nav ul li a {
   max-width: 75%;
   height: auto;
   border-radius: 5px;
+}
+
+.products h2 {
+  font-size: 3em;
 }
 
 .products .product-list {
