@@ -19,29 +19,31 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 10;
 }
 
 header .container {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   width: 100%;
 }
 
 header .logo {
-  margin-right: 20px; /* Add some margin to separate from the navigation */
+  margin-right: 20px;
 }
 
 header .logo img {
   height: 50px;
-  width: auto; /* Ensure the aspect ratio is maintained */
+  width: auto;
 }
 
 nav {
-  position: relative; /* Remove absolute positioning */
-  margin-left: 50px; /* Ensure some spacing from the logo */
+  position: relative;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 nav ul {
@@ -49,17 +51,25 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+}
+
+nav ul.show {
+  max-height: 300px; /* Adjust based on the total height of the menu items */
+  opacity: 1;
 }
 
 nav ul li {
   margin-right: 20px;
-  /* Space between menu items */
 }
 
 nav ul li a {
-  color: #000; /* Change color to black */
+  color: #000;
   text-decoration: none;
-  font-size: 20px; /* Adjust as necessary */
+  font-size: 20px;
 }
 
 .hero {
@@ -69,8 +79,9 @@ nav ul li a {
   color: #fff;
   padding: 100px 0;
   display: flex;
-  justify-content: center; /* Center the content horizontally */
-  align-items: center; /* Center the content vertically */
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
 }
 
 .hero .container {
@@ -155,7 +166,7 @@ nav ul li a {
 .achievements {
   position: relative;
   text-align: center;
-  padding: 100px 0; /* Adjust the padding as necessary */
+  padding: 100px 0;
   background: url("xprize.jpg") no-repeat center center/cover;
   background-size: cover;
   color: #fff;
@@ -167,7 +178,7 @@ nav ul li a {
   top: 0;
   left: 0;
   width: 100%;
-  height: calc(100%); /* Adjust to ensure it does not cover the awards box */
+  height: calc(100%);
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
 }
@@ -176,16 +187,16 @@ nav ul li a {
   position: relative;
   z-index: 3;
   padding: 20px;
-  padding-bottom: 160px; /* Increase bottom padding to avoid text overlap and provide more space */
+  padding-bottom: 160px;
   width: 100%;
   max-width: 100%;
-  box-sizing: border-box; /* Ensure padding is included in the total width */
+  box-sizing: border-box;
 }
 
 .achievements h2 {
   font-size: 2.5em;
   margin-bottom: 20px;
-  text-align: center; /* Ensure the text is centered */
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
@@ -200,7 +211,7 @@ nav ul li a {
 
 .achievements .highlight-text {
   font-size: 1.3em;
-  color: #fff; /* White color for highlighted text */
+  color: #fff;
 }
 
 .awards {
@@ -209,14 +220,14 @@ nav ul li a {
   align-items: flex-start;
   gap: 5%;
   flex-wrap: wrap;
-  padding: 0 0;
-  background: #39393982; /* Solid black background */
+  padding: 0;
+  background: #39393982;
   width: 100%;
-  margin: 0; /* Remove any default margin */
-  box-sizing: border-box; /* Ensure padding is included in the total width */
-  position: absolute; /* Positioning the awards box at the bottom */
-  bottom: 0; /* Align to the bottom */
-  z-index: 4; /* Ensure it is above the overlay */
+  margin: 0;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  z-index: 4;
   backdrop-filter: blur(15px);
 }
 
@@ -246,8 +257,6 @@ nav ul li a {
   margin: 0;
   max-width: 160px;
 }
-
-/* Continue with the rest of your CSS without modification */
 
 .products {
   padding: 50px 0;
@@ -392,7 +401,7 @@ nav ul li a {
   text-align: left;
 }
 
-.todo-classroom .todo-text p {
+.todo-classroom.todo-classroom .todo-text p {
   font-size: 1.4em;
   margin-bottom: 10px;
   text-align: left;
@@ -456,7 +465,7 @@ nav ul li a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Center align the entire container */
+  justify-content: center;
   width: 100%;
   height: auto;
 }
@@ -469,27 +478,25 @@ nav ul li a {
 }
 
 .contact h2 {
-  margin-bottom: 20px; /* Space between the heading and the form */
-  text-align: left; /* Left-align the heading */
-  align-self: flex-start; /* Align the heading to the start of the container */
-  margin-left: calc(
-    3% + 5px
-  ); /* Adjust to match the left end of the input box */
+  margin-bottom: 20px;
+  text-align: left;
+  align-self: flex-start;
+  margin-left: calc(3% + 5px);
 }
 
 .contact .form-and-image {
   display: flex;
   justify-content: center;
-  align-items: center; /* Align items in the center */
+  align-items: center;
   width: 100%;
 }
 
 .contact form {
-  width: 60%; /* Adjust width to ensure both form and image fit well */
+  width: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 20px; /* Space between the form and the image */
+  margin-right: 20px;
 }
 
 .contact .contact-image {
@@ -498,8 +505,8 @@ nav ul li a {
 }
 
 .contact .contact-image img {
-  max-height: 190px; /* Adjust the maximum height for the image */
-  width: auto; /* Maintain aspect ratio */
+  max-height: 190px;
+  width: auto;
   border-radius: 10px;
   box-sizing: border-box;
 }
@@ -508,50 +515,50 @@ nav ul li a {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  gap: 10px; /* Add a gap between the input fields */
+  gap: 10px;
 }
 
 .contact form .form-group input {
-  width: calc(50% - 5px); /* Calculate width considering the gap */
-  border-radius: 10px; /* Added for rounded corners */
-  box-sizing: border-box; /* Ensures padding is included in the total width and height */
-  padding: 10px; /* Ensure consistent padding */
-  border: 1px solid #ccc; /* Standard border */
-  font-weight: bold; /* Make text bold */
+  width: calc(50% - 5px);
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-weight: bold;
 }
 
 .contact form textarea {
   width: 100%;
-  height: 150px; /* Increase the height */
+  height: 150px;
   padding: 10px;
   margin-top: 10px;
-  border: 1px solid #ccc; /* Standard border */
-  border-radius: 10px; /* Ensures rounded corners */
+  border: 1px solid #ccc;
+  border-radius: 10px;
   box-sizing: border-box;
-  font-weight: bold; /* Make text bold */
+  font-weight: bold;
 }
 
 .contact form button {
   margin-top: 20px;
   padding: 10px 20px;
-  background: #fff; /* Change background to white */
-  color: #333; /* Change text color to black */
-  border: 2px solid #333; /* Add bold border */
+  background: #fff;
+  color: #333;
+  border: 2px solid #333;
   cursor: pointer;
-  border-radius: 25px; /* Ensures rounded corners */
-  font-size: 16px; /* Adjust font size if necessary */
-  font-weight: bold; /* Make text bold */
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
   display: flex;
   align-items: left;
   margin-left: 0;
   justify-content: center;
-  gap: 5px; /* Add gap for icon */
+  gap: 5px;
 }
 
 .contact form input::placeholder,
 .contact form textarea::placeholder {
-  color: #888; /* Color for placeholder text */
-  font-weight: bold; /* Make placeholder text bold */
+  color: #888;
+  font-weight: bold;
 }
 
 footer {
@@ -560,4 +567,91 @@ footer {
   text-align: center;
   padding: 10px 0;
   border-top: 1px solid #ccc;
+}
+
+header nav .hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+header nav ul.menu-items {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  width: 100%;
+}
+
+header nav ul.menu-items.show {
+  max-height: 300px;
+  opacity: 1;
+}
+
+header nav ul.menu-items li {
+  margin-right: 20px;
+}
+
+header nav ul.menu-items li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.contact-us-btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8%;
+  background-color: orange;
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px 10px;
+  }
+
+  header nav ul.menu-items {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  header nav ul.menu-items.show {
+    display: flex;
+  }
+
+  header nav .hamburger {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-us-btn {
+    display: none;
+  }
 }
