@@ -1,6 +1,6 @@
 /* Base font size for the html element */
 html {
-  font-size: 16px; /* This sets 1rem to be equal to 16px */
+  font-size: 16px;
 }
 
 body {
@@ -15,6 +15,10 @@ body {
   width: 90%;
   margin: 0 auto;
   max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 header {
@@ -467,7 +471,7 @@ header nav .hamburger {
   position: relative;
   text-align: center;
   padding: 0 0;
-  background: url("es.jpg") no-repeat center center/cover;
+  background: url(“es.jpg”) no-repeat center center/cover;
   background-size: cover;
   color: #fff;
   overflow: hidden;
@@ -697,9 +701,7 @@ footer {
   .contact-us-btn {
     display: flex;
   }
-}
 
-@media (max-width: 60rem) {
   .about .container {
     flex-direction: column;
   }

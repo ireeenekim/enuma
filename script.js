@@ -10,44 +10,55 @@ document.addEventListener("DOMContentLoaded", () => {
     menuItems.classList.toggle("show");
   }
 
+  function debounce(func, wait = 20, immediate = true) {
+    let timeout;
+    return function () {
+      const context = this,
+        args = arguments;
+      const later = function () {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      const callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  }
+
   if (hamburger) {
     hamburger.addEventListener("click", toggleMenu);
   } else {
     console.error("Hamburger menu element not found");
   }
 
-  function handleResize() {
+  function updateContactButtonVisibility() {
+    if (window.innerWidth <= 960) {
+      const contactSectionTop = contactSection.offsetTop;
+      if (window.scrollY + window.innerHeight >= contactSectionTop) {
+        contactUsBtn.style.display = "none";
+      } else {
+        contactUsBtn.style.display = "flex";
+      }
+    } else {
+      contactUsBtn.style.display = "none";
+    }
+  }
+
+  const handleResize = debounce(() => {
     if (window.innerWidth > 960) {
-      // 60rem * 16px = 960px
       menuItems.classList.remove("show");
     }
     updateContactButtonVisibility();
-  }
-
-  window.addEventListener("resize", handleResize);
+  });
 
   if (contactUsBtn) {
     contactUsBtn.addEventListener("click", () => {
       contactSection.scrollIntoView({ behavior: "smooth" });
     });
-
-    function updateContactButtonVisibility() {
-      if (window.innerWidth <= 960) {
-        // Show only on smaller screens
-        const contactSectionTop = contactSection.offsetTop;
-        if (window.scrollY + window.innerHeight >= contactSectionTop) {
-          contactUsBtn.style.display = "none";
-        } else {
-          contactUsBtn.style.display = "flex";
-        }
-      } else {
-        contactUsBtn.style.display = "none"; // Hide on larger screens
-      }
-    }
-
-    window.addEventListener("scroll", updateContactButtonVisibility);
-    window.addEventListener("resize", updateContactButtonVisibility);
-    updateContactButtonVisibility(); // Initial check
+    window.addEventListener("scroll", debounce(updateContactButtonVisibility));
+    window.addEventListener("resize", handleResize);
+    updateContactButtonVisibility();
   } else {
     console.error("Contact Us button element not found");
   }

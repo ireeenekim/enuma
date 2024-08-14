@@ -10,10 +10,10 @@
     <header>
       <div class="container">
         <div class="logo">
-          <img src="enuma.png" alt="Enuma ロゴ" />
+          <img src="enuma.png" alt="Enuma Logo" />
         </div>
         <nav>
-          <button class="hamburger">☰</button>
+          <button class="hamburger" aria-label="Toggle menu">☰</button>
           <ul class="menu-items">
             <li><a href="#">私たちについて</a></li>
             <li><a href="#">家族向け</a></li>
@@ -271,23 +271,31 @@
         <div class="form-and-image">
           <form action="#">
             <div class="form-group">
-              <input type="text" id="name" name="name" placeholder="タイトル" />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="タイトル"
+                aria-label="タイトル"
+              />
               <input
                 type="email"
                 id="email"
                 name="email"
                 placeholder="メールアドレス"
+                aria-label="メールアドレス"
               />
             </div>
             <textarea
               id="message"
               name="message"
               placeholder="メッセージ"
+              aria-label="メッセージ"
             ></textarea>
             <button type="submit">メッセージを送る</button>
           </form>
           <div class="contact-image">
-            <img src="contact.png" alt="お問い合わせ画像" />
+            <img src="contact.png" alt="Contact Us Image" />
           </div>
         </div>
       </div>
@@ -298,10 +306,6 @@
         <p>&copy; 2024 Enuma. 全著作権所有。</p>
       </div>
     </footer>
-
-    <button class="contact-us-btn" id="contactUsBtn" data-width="">
-      お問い合わせ
-    </button>
 
     <script src="script.js"></script>
   </body>
